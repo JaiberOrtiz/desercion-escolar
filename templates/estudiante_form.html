@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block titulo %}{{ 'Editar estudiante' if e else 'Nuevo estudiante' }}{% endblock %}
+
+{% block contenido %}
+<div class="encabezado">
+  <h1>{{ 'Editar estudiante' if e else 'Nuevo estudiante' }}</h1>
+  {% if e %}<p class="sub">{{ e.nombres }} {{ e.apellidos }}</p>{% endif %}
+</div>
+
+{% include "_estudiante_form.html" %}
+{% endblock %}
